@@ -14,6 +14,10 @@ const Navbar = () => {
           </li>
           <li className="h-4 border-r border-gray-500"></li>
           <li>
+            <Link href="https://news.adayroi.jp">News</Link>
+          </li>
+          <li className="h-4 border-r border-gray-500"></li>
+          <li>
             <Link href="https://jlpt.adayroi.jp">JLPT</Link>
           </li>
           <li className="h-4 border-r border-gray-500"></li>
