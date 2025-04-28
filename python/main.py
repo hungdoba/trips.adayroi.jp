@@ -6,9 +6,14 @@ import concurrent.futures
 
 
 def convert_to_webp(image_path, quality=80):
-    """Convert an image to WebP format."""
+    """Convert an image to WebP format with proper orientation."""
     try:
         img = Image.open(image_path)
+
+        # Apply EXIF orientation
+        if hasattr(img, '_getexif') and img._getexif() is not None:
+            from PIL import ImageOps
+            img = ImageOps.exif_transpose(img)
 
         # Create output filename (same path but with .webp extension)
         output_path = image_path.with_suffix('.webp')
@@ -48,7 +53,14 @@ def process_directory(directory_path, quality=80):
 
         # Process results as they complete
         for future in concurrent.futures.as_completed(future_to_path):
+            path = future_to_path[future]
             if future.result():
+                # Delete the original image if conversion was successful
+                try:
+                    os.remove(path)
+                    print(f"Deleted original: {path}")
+                except Exception as e:
+                    print(f"Error deleting {path}: {e}")
                 successful_conversions += 1
 
     return successful_conversions
