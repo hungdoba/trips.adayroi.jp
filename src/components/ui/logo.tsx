@@ -1,12 +1,16 @@
 'use client';
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 export default function Logo() {
   const { theme } = useTheme();
   return (
-    <Image
-      src={theme === 'dark' ? '/logo-dark.png' : '/logo.png'}
+    <ExportedImage
+      src={
+        theme === 'dark'
+          ? 'images/logos/logo-dark.png'
+          : 'images/logos/logo.png'
+      }
       priority
       width={430}
       height={148}

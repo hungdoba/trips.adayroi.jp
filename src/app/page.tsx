@@ -7,9 +7,11 @@ export default async function Home() {
   return (
     <main className="max-w-none prose dark:prose-invert mt-8">
       <section className="relative mx-auto">
-        {jsonData.map((log, index) => (
-          <TripLog key={index} trip={log} />
-        ))}
+        {jsonData
+          .sort((a, b) => b.id - a.id)
+          .map((log, index) => (
+            <TripLog key={index} trip={log} priority={index < 5} />
+          ))}
       </section>
     </main>
   );

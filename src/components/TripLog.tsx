@@ -1,12 +1,13 @@
 import { Trip } from '@/types/Log';
 import { Badge } from './ui/badge';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 interface Props {
   trip: Trip;
+  priority?: boolean;
 }
 
-export default function TripLog({ trip }: Props) {
+export default function TripLog({ trip, priority = false }: Props) {
   return (
     <article className="md:flex">
       <h2 className="content-date h-full mt-px">
@@ -22,9 +23,10 @@ export default function TripLog({ trip }: Props) {
         <h1 className="text-xl sm:text-3xl font-bold mb-4">{trip.title}</h1>
         {trip.images.map((image, index) => (
           <div key={index} className="flex">
-            <Image
+            <ExportedImage
               src={image.src}
               alt={image.alt}
+              priority={priority}
               width={0}
               height={0}
               sizes="100vw"
