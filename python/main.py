@@ -38,6 +38,10 @@ def process_directory(directory_path, quality=80):
         image_paths.extend(list(Path(directory_path).rglob(f"*{ext}")))
         image_paths.extend(list(Path(directory_path).rglob(f"*{ext.upper()}")))
 
+    # Filter out images with "logo" in the name
+    image_paths = [
+        path for path in image_paths if "logo" not in path.stem.lower()]
+
     if not image_paths:
         print(f"No images found in {directory_path}")
         return 0
