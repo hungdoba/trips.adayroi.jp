@@ -10,9 +10,7 @@ interface Props {
 export default function TripLog({ trip, priority = false }: Props) {
   return (
     <article className="md:flex">
-      <h2 className="content-date h-full mt-px">
-        <a>{trip.date}</a>
-      </h2>
+      <h2 className="content-date h-full mt-px">{trip.date}</h2>
       <div className="content-block pb-20">
         <div className="feed-border"></div>
         <div className="feed-dot"></div>
@@ -30,7 +28,7 @@ export default function TripLog({ trip, priority = false }: Props) {
               width={0}
               height={0}
               sizes="100vw"
-              className="mb-4 w-full h-auto"
+              className="rounded-md mb-4 w-full h-auto"
             />
             {image.caption && (
               <p className="text-sm text-gray-500">{image.caption}</p>

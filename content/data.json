@@ -1565,5 +1565,18 @@
         "caption": ""
       }
     ]
+  },
+  {
+    "id": 105,
+    "date": "2025-05-04",
+    "title": "Jimba Mountain",
+    "tag": "chiba",
+    "images": [
+      {
+        "src": "images/2025-05-04_12-09-46.webp",
+        "alt": "Image",
+        "caption": ""
+      }
+    ]
   }
 ]
