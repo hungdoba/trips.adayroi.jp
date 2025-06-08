@@ -213,5 +213,5 @@ code[data-line-numbers-max-digits='3'] > [data-line]::before {
 }
 
 .content-block {
-  @apply relative pt-2 pl-7 md:w-3/4 md:pt-0 md:pl-12 pb-16;
+  @apply relative pt-2 pl-7 md:w-3/4 md:pt-0 md:pl-12 md:pb-16;
 }
