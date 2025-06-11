@@ -17,5 +17,7 @@ export interface Trip {
   date: string;
   title: string;
   tag: string;
+  address: string;
+  mapUrl: string;
   images: Image[];
 }

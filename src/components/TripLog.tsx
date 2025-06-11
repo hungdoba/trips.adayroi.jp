@@ -1,6 +1,7 @@
 import { Trip } from '@/types/Log';
 import { Badge } from './ui/badge';
 import ExportedImage from 'next-image-export-optimizer';
+import MapLink from './MapLink';
 
 interface Props {
   trip: Trip;
@@ -25,8 +26,8 @@ export default function TripLog({ trip, priority = false }: Props) {
               src={image.src}
               alt={image.alt}
               priority={priority}
-              width={0}
-              height={0}
+              width={100}
+              height={100}
               sizes="100vw"
               className="rounded-md mb-4 w-full h-auto"
             />
@@ -35,6 +36,8 @@ export default function TripLog({ trip, priority = false }: Props) {
             )}
           </div>
         ))}
+
+        <MapLink address={trip.address} mapUrl={trip.mapUrl} />
       </div>
     </article>
   );
