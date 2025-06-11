@@ -2,6 +2,7 @@ import { Trip } from '@/types/Log';
 import { Badge } from './ui/badge';
 import ExportedImage from 'next-image-export-optimizer';
 import MapLink from './MapLink';
+import Video from './Video';
 
 interface Props {
   trip: Trip;
@@ -35,6 +36,10 @@ export default function TripLog({ trip, priority = false }: Props) {
               <p className="text-sm text-gray-500">{image.caption}</p>
             )}
           </div>
+        ))}
+
+        {trip.videos.map((video, index) => (
+          <Video src={video.src} key={index} />
         ))}
 
         <MapLink address={trip.address} mapUrl={trip.mapUrl} />

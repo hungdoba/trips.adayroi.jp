@@ -6,7 +6,7 @@ export type Log = {
   author?: string;
 };
 
-interface Image {
+interface Media {
   src: string;
   alt: string;
   caption: string;
@@ -19,5 +19,6 @@ export interface Trip {
   tag: string;
   address: string;
   mapUrl: string;
-  images: Image[];
+  images: Media[];
+  videos: Media[];
 }
