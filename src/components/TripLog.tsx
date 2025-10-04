@@ -1,4 +1,4 @@
-import { Trip } from '@/types/Log';
+import { Trip } from '@/features/trips/types';
 import { Badge } from './ui/badge';
 import ExportedImage from 'next-image-export-optimizer';
 import MapLink from './MapLink';
@@ -11,7 +11,7 @@ interface Props {
 
 export default function TripLog({ trip, priority = false }: Props) {
   return (
-    <article className="md:flex p-4 md:p-0">
+    <article className="md:flex p-4 md:p-0" id={`trip-${trip.id}`}>
       <h2 className="content-date h-full mt-px">{trip.date}</h2>
       <div className="content-block">
         <div className="feed-border"></div>
@@ -42,7 +42,9 @@ export default function TripLog({ trip, priority = false }: Props) {
           <Video src={video.src} key={index} />
         ))}
 
-        <MapLink address={trip.address} mapUrl={trip.mapUrl} />
+        {trip.mapUrl && trip.address && (
+          <MapLink address={trip.address} mapUrl={trip.mapUrl} />
+        )}
       </div>
     </article>
   );

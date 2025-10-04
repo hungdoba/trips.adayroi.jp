@@ -11,8 +11,12 @@ export interface Trip {
   date: string;
   title: string;
   tag: TripTag;
-  address: string;
-  mapUrl: string;
+  address: string | null;
+  mapUrl: string | null;
+  coordinates?: {
+    lat: number | null;
+    lng: number | null;
+  };
   images: Media[];
   videos: Media[];
 }

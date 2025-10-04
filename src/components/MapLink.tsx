@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { MapPin } from 'lucide-react';
 
 interface Props {
-  address: string;
+  address: string | null;
   mapUrl: string;
 }
 
@@ -15,7 +15,9 @@ export default function MapLink({ address, mapUrl }: Props) {
       className="flex items-center no-underline"
     >
       <MapPin className="w-4 h-4 mr-1 text-green-500" />
-      <span className="inline-flex items-center text-gray-400">{address}</span>
+      <span className="inline-flex items-center text-gray-400">
+        {address || 'Unknown location'}
+      </span>
     </Link>
   );
 }

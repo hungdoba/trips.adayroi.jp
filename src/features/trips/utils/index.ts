@@ -47,7 +47,7 @@ export function filterTrips(trips: Trip[], filters: TripFilters): Trip[] {
     filteredTrips = filteredTrips.filter(
       (trip) =>
         trip.title.toLowerCase().includes(searchLower) ||
-        trip.address.toLowerCase().includes(searchLower) ||
+        (trip.address || '').toLowerCase().includes(searchLower) ||
         trip.tag.toLowerCase().includes(searchLower)
     );
   }

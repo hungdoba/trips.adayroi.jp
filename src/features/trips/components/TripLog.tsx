@@ -13,7 +13,7 @@ interface TripLogProps {
 
 export default function TripLog({ trip, priority = false }: TripLogProps) {
   return (
-    <article className="md:flex p-4 md:p-0">
+    <article className="md:flex p-4 md:p-0" id={`trip-${trip.id}`}>
       <h2 className="content-date h-full mt-px">
         {formatDateCompact(trip.date)}
       </h2>
@@ -30,16 +30,13 @@ export default function TripLog({ trip, priority = false }: TripLogProps) {
           <div key={`image-${trip.id}-${index}`} className="flex">
             <ExportedImage
               src={`${TRIP_IMAGES_PATH}/${image.src}`}
-              alt={image.alt || `${trip.title} - Image ${index + 1}`}
+              alt={image.caption}
               priority={priority}
               width={100}
               height={100}
               sizes="100vw"
               className="rounded-md mb-4 w-full h-auto"
             />
-            {image.caption && (
-              <p className="text-sm text-gray-500 mt-2">{image.caption}</p>
-            )}
           </div>
         ))}
 
@@ -52,7 +49,9 @@ export default function TripLog({ trip, priority = false }: TripLogProps) {
           </div>
         ))}
 
-        <MapLink address={trip.address} mapUrl={trip.mapUrl} />
+        {trip.mapUrl && trip.address && (
+          <MapLink address={trip.address} mapUrl={trip.mapUrl} />
+        )}
       </div>
     </article>
   );
