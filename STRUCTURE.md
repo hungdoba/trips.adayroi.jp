@@ -5,7 +5,7 @@ This document outlines the improved project structure following Next.js 15 best 
 ## Directory Structure
 
 ```
-trips.adayroi.jp/
+trips.hungba.net/
 ├── public/                     # Static assets
 │   └── assets/                 # Organized assets
 │       ├── images/             # Image assets

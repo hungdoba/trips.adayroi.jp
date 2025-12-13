@@ -15,10 +15,10 @@ import { Menu } from 'lucide-react';
 import React from 'react';
 
 const navLinks = [
-  { href: 'https://news.adayroi.jp', key: 'News', external: true },
-  { href: 'https://chat.adayroi.jp', key: 'Chat', external: true },
-  { href: 'https://jlpt.adayroi.jp', key: 'Jlpt', external: true },
-  { href: 'https://adayroi.jp', key: 'Blog', external: true },
+  { href: 'https://news.hungba.net', key: 'News', external: true },
+  { href: 'https://chat.hungba.net', key: 'Chat', external: true },
+  { href: 'https://jlpt.hungba.net', key: 'Jlpt', external: true },
+  { href: 'https://hungba.net', key: 'Blog', external: true },
 ];
 
 const Navbar = () => {

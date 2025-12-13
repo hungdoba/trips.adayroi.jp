@@ -13,7 +13,7 @@ export default function Contact() {
           href={'https://www.facebook.com/profile.php?id=61573451684498'}
           className="text-blue-500 hover:underline"
         >
-          Adayroi.jp - Nơi chia sẻ những chuyến đi của tôi
+          hungba.net - Nơi chia sẻ những chuyến đi của tôi
         </Link>
       </section>
     </div>

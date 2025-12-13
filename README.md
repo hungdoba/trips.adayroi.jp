@@ -1,4 +1,4 @@
-# Trips - Adayroi.jp
+# Trips - hungba.net
 
 A personal travel log and trip diary built with Next.js 15, TypeScript, and Tailwind CSS.
 
@@ -37,8 +37,8 @@ See [STRUCTURE.md](./STRUCTURE.md) for detailed project structure documentation.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/hungdoba/trips.adayroi.jp.git
-cd trips.adayroi.jp
+git clone https://github.com/hungdoba/trips.hungba.net.git
+cd trips.hungba.net
 ```
 
 2. Install dependencies:

@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: `https://trips.adayroi.jp/sitemap.xml`,
+    sitemap: `https://trips.hungba.net/sitemap.xml`,
   };
 }
 

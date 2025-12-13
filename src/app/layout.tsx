@@ -18,15 +18,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Trips - Adayroi',
   description: 'Nơi lưu giữ các chuyến đi của tôi',
-  metadataBase: new URL('https://trips.adayroi.jp'),
+  metadataBase: new URL('https://trips.hungba.net'),
   openGraph: {
     title: 'Trips - Adayroi',
     description: 'Nơi lưu giữ các chuyến đi của tôi',
-    url: 'https://trips.adayroi.jp',
+    url: 'https://trips.hungba.net',
     siteName: 'Trips - Adayroi',
     images: [
       {
-        url: 'https://trips.adayroi.jp/images/logo.png',
+        url: 'https://trips.hungba.net/images/logo.png',
         width: 1200,
         height: 630,
         alt: 'Trips - Adayroi',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Trips - Adayroi',
     description: 'Nơi lưu giữ các chuyến đi của tôi',
-    images: 'https://trips.adayroi.jp/images/logo.png',
+    images: 'https://trips.hungba.net/images/logo.png',
     creator: '@adayroi',
     site: '@adayroi',
   },
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://trips.adayroi.jp',
+    canonical: 'https://trips.hungba.net',
   },
 };
 

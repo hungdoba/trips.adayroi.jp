@@ -1,7 +1,7 @@
 // App constants
-export const APP_NAME = 'Trips - Adayroi.jp';
+export const APP_NAME = 'Trips - hungba.net';
 export const APP_DESCRIPTION = 'Personal travel log and trip diary';
-export const APP_URL = 'https://trips.adayroi.jp';
+export const APP_URL = 'https://trips.hungba.net';
 
 // Image paths
 export const ASSETS_PATH = '/assets';
