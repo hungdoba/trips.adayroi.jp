@@ -1,7 +1,7 @@
 export default function AboutUs() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-3xl font-bold mb-6">Đôi nét về Trips adayroi!</h1>
+      <h1 className="text-3xl font-bold mb-6">Đôi nét về Trips Hungba!</h1>
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-3">Lời cảm ơn!</h2>
@@ -22,12 +22,12 @@ export default function AboutUs() {
       </section>
 
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-3">Về Trips adayroi</h2>
+        <h2 className="text-xl font-semibold mb-3">Về Trips Hungba</h2>
         <p className="mb-2">
-          Trips adayroi là nơi tôi chia sẻ hình ảnh và kỷ niệm từ những chuyến
-          đi mà tôi đã trải qua. Mỗi chuyến đi đều được ghi lại thời gian cụ
-          thể, để sau này tôi và bạn đọc có thể nhìn lại và cảm nhận những
-          khoảnh khắc đáng nhớ ấy.
+          Trips Hungba là nơi tôi chia sẻ hình ảnh và kỷ niệm từ những chuyến đi
+          mà tôi đã trải qua. Mỗi chuyến đi đều được ghi lại thời gian cụ thể,
+          để sau này tôi và bạn đọc có thể nhìn lại và cảm nhận những khoảnh
+          khắc đáng nhớ ấy.
         </p>
         <p className="mb-2">
           Tôi tin rằng mỗi chuyến đi đều là một câu chuyện riêng, mang đến những

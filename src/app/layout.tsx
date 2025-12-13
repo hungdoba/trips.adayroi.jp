@@ -16,20 +16,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Trips - Adayroi',
+  title: 'Trips - Hungba',
   description: 'Nơi lưu giữ các chuyến đi của tôi',
   metadataBase: new URL('https://trips.hungba.net'),
   openGraph: {
-    title: 'Trips - Adayroi',
+    title: 'Trips - Hungba',
     description: 'Nơi lưu giữ các chuyến đi của tôi',
     url: 'https://trips.hungba.net',
-    siteName: 'Trips - Adayroi',
+    siteName: 'Trips - Hungba',
     images: [
       {
         url: 'https://trips.hungba.net/images/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Trips - Adayroi',
+        alt: 'Trips - Hungba',
       },
     ],
     locale: 'vi_VN',
@@ -44,11 +44,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Trips - Adayroi',
+    title: 'Trips - Hungba',
     description: 'Nơi lưu giữ các chuyến đi của tôi',
     images: 'https://trips.hungba.net/images/logo.png',
-    creator: '@adayroi',
-    site: '@adayroi',
+    creator: '@Hungba',
+    site: '@Hungba',
   },
   icons: {
     icon: '/favicon.ico',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     apple: '/images/logo.png',
   },
   appleWebApp: {
-    title: 'Trips - Adayroi',
+    title: 'Trips - Hungba',
     statusBarStyle: 'default',
     capable: true,
     startupImage: [
