@@ -187,7 +187,7 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
   return (
     <div>
       {/* Desktop: Always visible map */}
-      <div className="hidden lg:block fixed bottom-6 right-6 z-40 transition-all duration-300">
+      <div className="hidden lg:block fixed bottom-6 left-6 z-40 transition-all duration-300">
         <div className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden backdrop-blur-sm">
           <div className="w-80 h-48 relative">
             <MapContainer
