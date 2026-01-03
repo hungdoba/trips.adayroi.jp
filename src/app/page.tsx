@@ -1,6 +1,6 @@
 import { TripLog } from '@/features/trips';
 import { readTripsData, sortTrips } from '@/features/trips/utils';
-import MapWrapper from '@/components/MapWrapper';
+// import MapWrapper from '@/components/MapWrapper';
 
 export default async function Home() {
   const trips = readTripsData();
@@ -13,7 +13,7 @@ export default async function Home() {
           <TripLog key={trip.id} trip={trip} priority={index < 5} />
         ))}
       </section>
-      <MapWrapper trips={sortedTrips} />
+      {/* <MapWrapper trips={sortedTrips} /> */}
     </main>
   );
 }

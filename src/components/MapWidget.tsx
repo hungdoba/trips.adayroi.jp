@@ -70,6 +70,14 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
 
   const currentLocation = currentTrip ? getLocationFromTrip(currentTrip) : null;
 
+  // Additional validation to ensure we have valid coordinates
+  const hasValidLocation =
+    currentLocation &&
+    typeof currentLocation.lat === 'number' &&
+    typeof currentLocation.lng === 'number' &&
+    !isNaN(currentLocation.lat) &&
+    !isNaN(currentLocation.lng);
+
   const getCurrentVisibleTrip = useCallback((): Trip | null => {
     const articles = document.querySelectorAll('article[id^="trip-"]');
     const scrollTop = window.scrollY;
@@ -159,30 +167,43 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
   }, [currentTrip, mappableTrips, getCurrentVisibleTrip]);
 
   useEffect(() => {
-    if (
-      mapRef.current &&
-      currentLocation &&
-      !isNaN(currentLocation.lat) &&
-      !isNaN(currentLocation.lng)
-    ) {
-      const map = mapRef.current;
-
-      map.flyTo([currentLocation.lat, currentLocation.lng], 10, {
-        animate: true,
-        duration: 1.2,
-      });
+    if (!mapRef.current || !currentLocation) {
+      return;
     }
+
+    const lat = currentLocation.lat;
+    const lng = currentLocation.lng;
+
+    // Extra defensive check to ensure we have valid numbers
+    if (
+      typeof lat !== 'number' ||
+      typeof lng !== 'number' ||
+      isNaN(lat) ||
+      isNaN(lng) ||
+      lat === null ||
+      lng === null
+    ) {
+      console.warn('Invalid coordinates detected:', { lat, lng, currentTrip });
+      return;
+    }
+
+    const map = mapRef.current;
+    map.flyTo([lat, lng], 10, {
+      animate: true,
+      duration: 1.2,
+    });
   }, [currentLocation, currentTrip]);
 
-  if (
-    mappableTrips.length === 0 ||
-    !currentTrip ||
-    !currentLocation ||
-    isNaN(currentLocation.lat) ||
-    isNaN(currentLocation.lng)
-  ) {
+  if (mappableTrips.length === 0 || !currentTrip || !hasValidLocation) {
     return null;
   }
+
+  // At this point, we know currentLocation is valid due to hasValidLocation check
+  // Create safe coordinates for use in JSX
+  const safeCoords = {
+    lat: currentLocation!.lat,
+    lng: currentLocation!.lng,
+  };
 
   return (
     <div>
@@ -191,7 +212,7 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
         <div className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden backdrop-blur-sm">
           <div className="w-80 h-48 relative">
             <MapContainer
-              center={[currentLocation.lat, currentLocation.lng]}
+              center={[safeCoords.lat, safeCoords.lng]}
               zoom={8}
               style={{ height: '100%', width: '100%' }}
               ref={mapRef}
@@ -203,7 +224,7 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
             >
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               <Marker
-                position={[currentLocation.lat, currentLocation.lng]}
+                position={[safeCoords.lat, safeCoords.lng]}
                 icon={createMarkerIcon()}
               />
             </MapContainer>
@@ -268,7 +289,7 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
               style={{ height: '60vw', maxHeight: '300px' }}
             >
               <MapContainer
-                center={[currentLocation.lat, currentLocation.lng]}
+                center={[safeCoords.lat, safeCoords.lng]}
                 zoom={8}
                 style={{ height: '100%', width: '100%' }}
                 ref={mapRef}
@@ -280,7 +301,7 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
               >
                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 <Marker
-                  position={[currentLocation.lat, currentLocation.lng]}
+                  position={[safeCoords.lat, safeCoords.lng]}
                   icon={createMarkerIcon()}
                 />
               </MapContainer>
