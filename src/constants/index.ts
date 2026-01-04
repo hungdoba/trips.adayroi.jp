@@ -4,11 +4,10 @@ export const APP_DESCRIPTION = 'Personal travel log and trip diary';
 export const APP_URL = 'https://trips.hungba.net';
 
 // Image paths
-export const ASSETS_PATH = '/assets';
-export const IMAGES_PATH = `${ASSETS_PATH}/images`;
+export const IMAGES_PATH = '/images';
 export const TRIP_IMAGES_PATH = `${IMAGES_PATH}/trips`;
 export const LOGO_PATH = `${IMAGES_PATH}/logos`;
-export const VIDEO_PATH = `${ASSETS_PATH}/videos`;
+export const VIDEO_PATH = '/videos';
 
 // Trip tags
 export const TRIP_TAGS = {

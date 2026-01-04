@@ -76,7 +76,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Trip data is stored in `src/data/trips.json`. To add a new trip:
 
-1. Add images to `public/assets/images/trips/`
+1. Add images to `public/images/trips/`
 2. Add trip entry to `trips.json` with the following structure:
 
 ```json

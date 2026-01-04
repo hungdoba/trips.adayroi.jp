@@ -33,7 +33,7 @@ describe('Logo Integration Tests', () => {
 
       await waitFor(() => {
         const logo = screen.getByTestId('logo');
-        expect(logo).toHaveAttribute('src', '/assets/images/logos/logo.png');
+        expect(logo).toHaveAttribute('src', '/images/logos/logo.png');
       });
 
       // Switch to dark theme
@@ -51,10 +51,7 @@ describe('Logo Integration Tests', () => {
 
       await waitFor(() => {
         const logo = screen.getByTestId('logo');
-        expect(logo).toHaveAttribute(
-          'src',
-          '/assets/images/logos/logo-dark.png'
-        );
+        expect(logo).toHaveAttribute('src', '/images/logos/logo-dark.png');
       });
     });
 
@@ -105,10 +102,7 @@ describe('Logo Integration Tests', () => {
         const logo = screen.getByAltText('Company Footer Logo');
         expect(logo).toHaveClass('h-16');
         expect(logo).not.toHaveClass('pr-2', 'pr-4', 'pr-6');
-        expect(logo).toHaveAttribute(
-          'src',
-          '/assets/images/logos/logo-dark.png'
-        );
+        expect(logo).toHaveAttribute('src', '/images/logos/logo-dark.png');
       });
     });
 
@@ -152,7 +146,7 @@ describe('Logo Integration Tests', () => {
       await waitFor(() => {
         const logo = screen.getByTestId('logo');
         // Should fallback to light theme
-        expect(logo).toHaveAttribute('src', '/assets/images/logos/logo.png');
+        expect(logo).toHaveAttribute('src', '/images/logos/logo.png');
       });
     });
 

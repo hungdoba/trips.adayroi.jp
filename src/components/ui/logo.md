@@ -71,8 +71,8 @@ import { Logo } from '@/components/ui/logo';
 
 The component automatically detects the current theme using `next-themes` and switches between:
 
-- **Light theme**: `/assets/images/logos/logo.png`
-- **Dark theme**: `/assets/images/logos/logo-dark.png`
+- **Light theme**: `/images/logos/logo.png`
+- **Dark theme**: `/images/logos/logo-dark.png`
 
 Make sure these images exist in your `public` directory.
 

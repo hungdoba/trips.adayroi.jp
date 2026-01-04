@@ -57,7 +57,7 @@ trips.hungba.net/
 
 ### 2. Asset Organization
 
-- Images moved from `/public/images/` to `/public/assets/images/trips/`
+- Images moved from `/public/images/` to `/public/images/trips/`
 - Better organization for different asset types
 - Easier to manage and optimize
 

@@ -83,9 +83,7 @@ export function Logo({
   }
 
   const logoSrc =
-    theme === 'dark'
-      ? '/assets/images/logos/logo-dark.png'
-      : '/assets/images/logos/logo.png';
+    theme === 'dark' ? '/images/logos/logo-dark.png' : '/images/logos/logo.png';
 
   return (
     <ExportedImage

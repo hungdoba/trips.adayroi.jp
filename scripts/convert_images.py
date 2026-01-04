@@ -1,3 +1,34 @@
+"""
+Image to WebP Converter
+
+This script converts images (JPG, JPEG, PNG) to WebP format for better web performance.
+
+Features:
+    - Recursively processes all images in a directory and its subdirectories
+    - Handles EXIF orientation data to ensure proper image rotation
+    - Uses concurrent processing for faster conversion (multi-threading)
+    - Automatically excludes images with "logo" in their filename
+    - Deletes original images after successful conversion
+    - Configurable quality setting (0-100)
+
+Usage:
+    python convert-images.py [directory] [quality]
+    
+    Arguments:
+        directory (optional): Path to the directory containing images
+                            Default: "public\\images"
+        quality (optional): WebP quality setting (0-100)
+                          Default: 80
+
+Examples:
+    python convert-images.py
+    python convert-images.py "public/images"
+    python convert-images.py "public/images" 90
+
+Requirements:
+    - Pillow (PIL): pip install Pillow
+"""
+
 import os
 import sys
 from pathlib import Path
@@ -11,9 +42,12 @@ def convert_to_webp(image_path, quality=80):
         img = Image.open(image_path)
 
         # Apply EXIF orientation
-        if hasattr(img, '_getexif') and img._getexif() is not None:
+        try:
             from PIL import ImageOps
             img = ImageOps.exif_transpose(img)
+        except Exception:
+            # If no EXIF data or orientation tag, continue with original image
+            pass
 
         # Create output filename (same path but with .webp extension)
         output_path = image_path.with_suffix('.webp')

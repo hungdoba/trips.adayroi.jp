@@ -2353,5 +2353,145 @@
       "lat": 35.8822,
       "lng": 139.3197
     }
+  },
+  {
+    "id": 108,
+    "date": "2025-07-06",
+    "title": "Mt. Odake",
+    "tag": "tokyo",
+    "address": "大岳山",
+    "mapUrl": "https://maps.app.goo.gl/BArn4LwEVNdZwY669",
+    "videos": [],
+    "images": [
+      {
+        "src": "2025-07-06_16-32-13.webp",
+        "alt": "Mt. Odake",
+        "caption": "Núi Odake"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.7669,
+      "lng": 139.1304
+    }
+  },
+  {
+    "id": 109,
+    "date": "2025-08-17",
+    "title": "Mount Takahata",
+    "tag": "saitama",
+    "address": "高畑山",
+    "mapUrl": "https://maps.app.goo.gl/vveLPF58YBR84aab8",
+    "videos": [],
+    "images": [
+      {
+        "src": "2025-08-17_13-06-09.webp",
+        "alt": "Mount Takahata",
+        "caption": "Núi Takahata"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.9179,
+      "lng": 139.1674
+    }
+  },
+  {
+    "id": 110,
+    "date": "2025-11-02",
+    "title": "Mount Mizugaki",
+    "tag": "yamanashi",
+    "address": "瑞牆山",
+    "mapUrl": "https://maps.app.goo.gl/wkUALGCg3nkXGKDu6",
+    "videos": [],
+    "images": [
+      {
+        "src": "2025-11-02_16-14-35.webp",
+        "alt": "Mount Mizugaki",
+        "caption": "Núi Mizugaki"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.8952,
+      "lng": 138.5943
+    }
+  },
+  {
+    "id": 111,
+    "date": "2025-11-03",
+    "title": "Mount Kinpu",
+    "tag": "nagano",
+    "address": "金峰山",
+    "mapUrl": "https://maps.app.goo.gl/akppzAHv2fFxo69j9",
+    "videos": [],
+    "images": [
+      {
+        "src": "2025-11-03_10-34-57.webp",
+        "alt": "Mount Kinpu",
+        "caption": "Núi Kinpu"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.8733,
+      "lng": 138.625
+    }
+  },
+  {
+    "id": 112,
+    "date": "2025-11-24",
+    "title": "Mizumoto Park",
+    "tag": "tokyo",
+    "address": "水元公園",
+    "mapUrl": "https://maps.app.goo.gl/BRYyM6XCJwNzwSCT7",
+    "videos": [],
+    "images": [
+      {
+        "src": "2025-11-24_14-30-18.webp",
+        "alt": "Mizumoto Park",
+        "caption": "Công viên Mizumoto"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.7852,
+      "lng": 139.8709
+    }
+  },
+  {
+    "id": 113,
+    "date": "2025-12-30",
+    "title": "Ubara Utopia",
+    "tag": "chiba",
+    "address": "鵜原理想郷（南房総国定公園）",
+    "mapUrl": "https://maps.app.goo.gl/zE5qWQw332e96kje6",
+    "videos": [],
+    "images": [
+      {
+        "src": "2025-12-30_12-10-05.webp",
+        "alt": "Ubara Utopia",
+        "caption": "Ubara Utopia"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.1334,
+      "lng": 140.2771
+    }
+  },
+  {
+    "id": 114,
+    "date": "2026-01-01",
+    "title": "Imperial Palace",
+    "tag": "tokyo",
+    "address": "皇居",
+    "mapUrl": "https://maps.app.goo.gl/zPwq9v64kPFiDRWKA",
+    "videos": [],
+    "images": [
+      {
+        "src": "2026-01-01_16-04-52.webp",
+        "alt": "Imperial Palace",
+        "caption": "Hoàng cung"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.6854,
+      "lng": 139.7529
+    }
   }
 ]

@@ -27,7 +27,7 @@ describe('Logo Component', () => {
 
       await waitFor(() => {
         const logo = screen.getByTestId('logo');
-        expect(logo).toHaveAttribute('src', '/assets/images/logos/logo.png');
+        expect(logo).toHaveAttribute('src', '/images/logos/logo.png');
       });
     });
 
@@ -45,10 +45,7 @@ describe('Logo Component', () => {
 
       await waitFor(() => {
         const logo = screen.getByTestId('logo');
-        expect(logo).toHaveAttribute(
-          'src',
-          '/assets/images/logos/logo-dark.png'
-        );
+        expect(logo).toHaveAttribute('src', '/images/logos/logo-dark.png');
       });
     });
 
@@ -66,7 +63,7 @@ describe('Logo Component', () => {
 
       await waitFor(() => {
         const logo = screen.getByTestId('logo');
-        expect(logo).toHaveAttribute('src', '/assets/images/logos/logo.png');
+        expect(logo).toHaveAttribute('src', '/images/logos/logo.png');
       });
     });
   });
