@@ -2493,5 +2493,105 @@
       "lat": 35.6854,
       "lng": 139.7529
     }
+  },
+  {
+    "id": 115,
+    "date": "2026-03-15",
+    "title": "Kadokawa Musashino Museum",
+    "tag": "saitama",
+    "address": "角川武蔵野ミュージアム",
+    "mapUrl": "https://maps.app.goo.gl/4Y1VU4djAZ2LU8996",
+    "videos": [],
+    "images": [
+      {
+        "src": "2026-03-15_15-20-24.webp",
+        "alt": "Kadokawa Musashino Museum",
+        "caption": "Kadokawa Musashino Museum"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.7978,
+      "lng": 139.5085
+    }
+  },
+  {
+    "id": 116,
+    "date": "2026-04-05",
+    "title": "Godzilla Head",
+    "tag": "tokyo",
+    "address": "ゴジラヘッド",
+    "mapUrl": "https://maps.app.goo.gl/PdcrB9yLc2ccZFZV6",
+    "videos": [],
+    "images": [
+      {
+        "src": "2026-04-05_16-02-03.webp",
+        "alt": "Godzilla Head",
+        "caption": "Godzilla Head"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.695,
+      "lng": 139.7019
+    }
+  },
+  {
+    "id": 117,
+    "date": "2026-05-02",
+    "title": "Akagi mountain",
+    "tag": "gunma",
+    "address": "赤城山",
+    "mapUrl": "https://maps.app.goo.gl/6duT7YcgLKnnEa4q8",
+    "videos": [],
+    "images": [
+      {
+        "src": "2026-05-02_13-21-16.webp",
+        "alt": "Akagi mountain",
+        "caption": "Akagi mountain"
+      }
+    ],
+    "coordinates": {
+      "lat": 36.5401,
+      "lng": 139.1701
+    }
+  },
+  {
+    "id": 118,
+    "date": "2026-07-11",
+    "title": "Naritasan Shinsho-ji",
+    "tag": "chiba",
+    "address": "真言宗智山派 成田山 新勝寺",
+    "mapUrl": "https://maps.app.goo.gl/NF2ZAdqE7sr5VQjy8",
+    "videos": [],
+    "images": [
+      {
+        "src": "2026-07-11_12-05-51.webp",
+        "alt": "Naritasan Shinsho-ji",
+        "caption": "Naritasan Shinsho-ji"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.78617291863542,
+      "lng": 140.31852744671772
+    }
+  },
+  {
+    "id": 119,
+    "date": "2026-07-30",
+    "title": "Mount Daibosatsu",
+    "tag": "yamanashi",
+    "address": "大菩薩嶺",
+    "mapUrl": "https://maps.app.goo.gl/NsvKRhnZcEvDd4oW9",
+    "videos": [],
+    "images": [
+      {
+        "src": "2026-07-30_12-53-56.webp",
+        "alt": "Mount Daibosatsu",
+        "caption": "Mount Daibosatsu"
+      }
+    ],
+    "coordinates": {
+      "lat": 35.74971166500736,
+      "lng": 138.8489777123068
+    }
   }
 ]
