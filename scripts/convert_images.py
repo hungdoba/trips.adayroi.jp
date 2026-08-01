@@ -109,7 +109,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         directory = sys.argv[1]
     else:
-        directory = "public\images"
+        directory = r"public\images"
 
     # Try to get quality from command line arguments
     quality = 80
