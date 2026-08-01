@@ -49,7 +49,10 @@ const createMarkerIcon = () => {
 };
 
 export default function MapWidget({ trips }: ScrollMapWidgetProps) {
-  const [currentTrip, setCurrentTrip] = useState<Trip | null>(null);
+  // Only tracks trips explicitly selected via scroll; the "default to
+  // first trip" behavior is derived at render time (see currentTrip below)
+  // instead of being synced in via an effect.
+  const [selectedTrip, setSelectedTrip] = useState<Trip | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const mapRef = useRef<L.Map | null>(null);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -67,6 +70,11 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
 
     return hasMedia && hasValidCoordinates;
   });
+
+  // Derived value: use the explicitly selected trip if we have one,
+  // otherwise fall back to the first mappable trip. This replaces the
+  // old "setCurrentTrip(mappableTrips[0]) inside useEffect" pattern.
+  const currentTrip = selectedTrip ?? mappableTrips[0] ?? null;
 
   const currentLocation = currentTrip ? getLocationFromTrip(currentTrip) : null;
 
@@ -126,15 +134,10 @@ export default function MapWidget({ trips }: ScrollMapWidgetProps) {
         const visibleTrip = getCurrentVisibleTrip();
 
         if (visibleTrip && visibleTrip.id !== currentTrip?.id) {
-          setCurrentTrip(visibleTrip);
+          setSelectedTrip(visibleTrip);
         }
       }, 100); // Reduced timeout for more responsive updates
     };
-
-    // Set initial trip if none is selected
-    if (mappableTrips.length > 0 && !currentTrip) {
-      setCurrentTrip(mappableTrips[0]);
-    }
 
     // Throttle scroll events for better performance
     let ticking = false;
